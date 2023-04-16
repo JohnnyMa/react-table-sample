@@ -39,6 +39,8 @@
   padding: 8px;
   border: 1px solid #ddd;
   height: 60px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .table-item.table-left {
@@ -60,12 +62,15 @@
   justify-content: flex-end;
 }
 
+.pagination-wrapper {
+  padding: 5px 0;
+}
+
 .pagination-wrapper .pagination,
 .pagination-wrapper .paginator {
   display: inline-block;
-  margin: 5px;
 }
 
-.pagination-wrapper .paginator {
-  margin-right: 0;
+.pagination-wrapper .pagination button {
+  margin-right: 5px;
 }
