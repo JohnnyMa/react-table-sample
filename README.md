@@ -1,6 +1,15 @@
 # Tiny table component sample based on React and TypeScript.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Deploy to GH Pages](https://github.com/JohnnyMa/react-table-sample/actions/workflows/main.yml/badge.svg)](https://github.com/JohnnyMa/react-table-sample/actions/workflows/main.yml)
+
+There're limited features in this table component for now. 
+1. Fixed the table header and can specify to sort by the value of a column in positive or reverse order (front-end sorting is enough).
+
+2. Support specifying left n columns or right n columns to be fixed when scrolling horizontally.
+
+3. Support pagination and specify the page size.
+
+BTW, this project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
