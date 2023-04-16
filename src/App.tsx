@@ -17,7 +17,7 @@ function App() {
       country: "United Kingdom",
       list: 13,
       text: "sapien molestie orci tincidunt adipiscing. Mauris molestie pharetra nibh. Aliquam",
-      color: "#3fa9e2",
+      color: "Gray",
     },
     {
       id: 2,
@@ -30,7 +30,7 @@ function App() {
       country: "Brazil",
       list: 19,
       text: "eget mollis lectus pede et risus. Quisque libero lacus, varius",
-      color: "#d33fa9",
+      color: "Red",
     },
     {
       id: 3,
@@ -43,7 +43,7 @@ function App() {
       country: "Spain",
       list: 1,
       text: "id risus quis diam luctus lobortis. Class aptent taciti sociosqu",
-      color: "#b2ffed",
+      color: "Blue",
     },
     {
       id: 4,
@@ -56,7 +56,7 @@ function App() {
       country: "Belgium",
       list: 19,
       text: "imperdiet dictum magna. Ut tincidunt orci quis lectus. Nullam suscipit,",
-      color: "#6e0ea5",
+      color: "Pink",
     },
     {
       id: 5,
@@ -69,7 +69,7 @@ function App() {
       country: "Chile",
       list: 3,
       text: "sit amet ante. Vivamus non lorem vitae odio sagittis semper.",
-      color: "#82ffcd",
+      color: "Yellow",
     },
     {
       id: 6,
@@ -82,7 +82,7 @@ function App() {
       country: "Costa Rica",
       list: 15,
       text: "urna. Nullam lobortis quam a felis ullamcorper viverra. Maecenas iaculis",
-      color: "#efbf73",
+      color: "White",
     },
     {
       id: 7,
@@ -95,7 +95,7 @@ function App() {
       country: "Philippines",
       list: 9,
       text: "varius et, euismod et, commodo at, libero. Morbi accumsan laoreet",
-      color: "#d4ffb2",
+      color: "Black",
     },
     {
       id: 8,
@@ -108,7 +108,7 @@ function App() {
       country: "Colombia",
       list: 9,
       text: "ac nulla. In tincidunt congue turpis. In condimentum. Donec at",
-      color: "#651ea8",
+      color: "Blue",
     },
     {
       id: 9,
@@ -121,7 +121,7 @@ function App() {
       country: "Germany",
       list: 11,
       text: "non sapien molestie orci tincidunt adipiscing. Mauris molestie pharetra nibh.",
-      color: "#e1e881",
+      color: "Pink",
     },
     {
       id: 10,
@@ -134,7 +134,7 @@ function App() {
       country: "Germany",
       list: 19,
       text: "lacus pede sagittis augue, eu tempor erat neque non quam.",
-      color: "#86ef8b",
+      color: "Gray",
     },
     {
       id: 11,
@@ -147,7 +147,7 @@ function App() {
       country: "Pakistan",
       list: 7,
       text: "eu erat semper rutrum. Fusce dolor quam, elementum at, egestas",
-      color: "#787ed3",
+      color: "White",
     },
     {
       id: 12,
@@ -160,7 +160,7 @@ function App() {
       country: "Brazil",
       list: 3,
       text: "Cras lorem lorem, luctus ut, pellentesque eget, dictum placerat, augue.",
-      color: "#d646ab",
+      color: "Lightgray",
     },
     {
       id: 13,
@@ -173,7 +173,7 @@ function App() {
       country: "Singapore",
       list: 19,
       text: "consectetuer euismod est arcu ac orci. Ut semper pretium neque.",
-      color: "#cdf42e",
+      color: "Lightblue",
     },
     {
       id: 14,
@@ -186,7 +186,7 @@ function App() {
       country: "Brazil",
       list: 3,
       text: "luctus vulputate, nisi sem semper erat, in consectetuer ipsum nunc",
-      color: "#09c63f",
+      color: "Lightgray",
     },
     {
       id: 15,
@@ -199,7 +199,7 @@ function App() {
       country: "Indonesia",
       list: 1,
       text: "eget, volutpat ornare, facilisis eget, ipsum. Donec sollicitudin adipiscing ligula.",
-      color: "#e8a0ca",
+      color: "Lightgray",
     },
   ];
 
@@ -212,20 +212,111 @@ function App() {
     { name: "PostalZip", key: "postalZip", sortable: false, width: 80 },
     { name: "Region", key: "region", sortable: true, width: 80 },
     { name: "Country", key: "country", sortable: true, width: 80 },
-    // { name: "Description", key: "text", sortable: true,, width: 20 },
-    { name: "Color", key: "color", sortable: false, width: 60 },
+    { name: "Color", key: "color", sortable: true, width: 60 },
   ];
 
   return (
     <div className="App">
+      <h2>Tiny Table Component Sample</h2>
       <div className="sample-wrapper">
         <Table
           data={users}
           columns={columns}
           defaultPageSize={10}
-          fixedLeftColumns={1}
+          fixedLeftColumns={2}
           fixedRightColumns={1}
         />
+      </div>
+
+      <div className="api-table-wrapper">
+        <h2>How to use</h2>
+        <h3>#1 Table API</h3>
+        <table className="component-api-table">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Description</th>
+              <th>Type</th>
+              <th>Default</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>data</td>
+              <td>Data record array to be displayed</td>
+              <td>object[]</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>columns</td>
+              <td>
+                Columns of table. You could find more details in `TableColumn
+                API`.
+              </td>
+              <td>TableColumn[]</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>defaultPageSize</td>
+              <td>Default pagination size. E.g. 10 records per page</td>
+              <td>number</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>fixedLeftColumns</td>
+              <td>Set the fixed columns start from the first column.</td>
+              <td>number</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>fixedRightColumns</td>
+              <td>Set the fixed columns start from the last column.</td>
+              <td>number</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>#2 TableColumn API</h3>
+        <table className="component-api-table">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Description</th>
+              <th>Type</th>
+              <th>Default</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>key</td>
+              <td>Column key</td>
+              <td>string</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>name</td>
+              <td>Column name</td>
+              <td>string</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>sortable</td>
+              <td>Set it as `true` if you want to make the column sortable.</td>
+              <td>boolean</td>
+              <td>false</td>
+            </tr>
+            <tr>
+              <td>width</td>
+              <td>
+                Set the width for specific column. E.g. Set it as `10`, which
+                means the width is `10px`.
+              </td>
+              <td>number</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   );

@@ -6,3 +6,21 @@
   max-width: 60vw;
   margin: 0 auto;
 }
+
+.api-table-wrapper {
+  background-color: #eee;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+.component-api-table {
+  border: 1px solid #999;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.component-api-table th,
+.component-api-table td {
+  border: 1px solid #999;
+  height: 40px;
+}
