@@ -27,6 +27,7 @@
 
 .sort-arrow {
   display: inline-block;
+  color: darkgray;
 }
 
 /* Table Body */
@@ -71,6 +72,15 @@
   display: inline-block;
 }
 
+.pagination-wrapper .paginator {
+  cursor: pointer;
+}
+
 .pagination-wrapper .pagination button {
   margin-right: 5px;
+  cursor: pointer;
+}
+
+.pagination-wrapper .pagination button:disabled {
+  cursor: inherit;
 }
