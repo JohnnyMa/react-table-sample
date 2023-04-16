@@ -1,6 +1,5 @@
 .table-wrapper {
   overflow-x: scroll;
-  max-width: 60vw;
   position: relative;
   height: 400px;
   display: flex;
@@ -56,8 +55,17 @@
   background-color: #fff;
 }
 
+.pagination-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .pagination-wrapper .pagination,
 .pagination-wrapper .paginator {
   display: inline-block;
   margin: 5px;
+}
+
+.pagination-wrapper .paginator {
+  margin-right: 0;
 }
