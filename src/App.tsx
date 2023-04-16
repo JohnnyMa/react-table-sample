@@ -218,6 +218,11 @@ function App() {
   return (
     <div className="App">
       <h2>Tiny Table Component Sample</h2>
+      <p>
+        FYI. In below sample, the `sortable columns` are ID, Name, Email,
+        Region, Country and Color.
+      </p>
+      <p>The `frozen columns` are ID, Name and Color.</p>
       <div className="sample-wrapper">
         <Table
           data={users}
