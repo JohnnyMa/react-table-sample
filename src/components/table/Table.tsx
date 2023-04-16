@@ -32,8 +32,6 @@ const Table: React.FC<TableProps> = ({
     return data;
   }, [data, sortColumn, sortOrder]);
 
-  // let totalPages = Math.ceil(sortedData.length / pageSize);
-
   const visibleColumns = useMemo(() => {
     const cols = columns.slice();
     if (fixedLeftColumns > 0) {

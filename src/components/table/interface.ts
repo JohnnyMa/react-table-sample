@@ -2,7 +2,7 @@ export interface TableColumn {
   name: string;
   key: string;
   sortable: boolean;
-  width: number; // string | number;
+  width: number;
 }
 
 export interface TableProps {
