@@ -80,6 +80,10 @@ const Table: React.FC<TableProps> = ({
     }
   };
 
+  if (!data || data.length === 0) {
+    return <div className="table-wrapper empty">No data available</div>;
+  }
+
   return (
     <>
       <div className="table-wrapper" onScroll={handleScroll}>

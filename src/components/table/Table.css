@@ -5,6 +5,16 @@
   display: flex;
 }
 
+.table-wrapper.empty {
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  height: auto;
+  overflow: hidden;
+  min-height: 40px;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .table-item {
   border-collapse: collapse;
   width: 100vw;
