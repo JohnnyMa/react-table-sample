@@ -16,6 +16,70 @@ BTW, this project was bootstrapped with [Create React App](https://github.com/fa
 
 https://johnnyma.github.io/react-table-sample/
 
+## How to use
+
+```
+  const users = [
+    {
+      id: 1,
+      name: "Evelyn Zamora",
+      phone: "0888 309 7758",
+      email: "enim.a@google.edu",
+      address: "935-3691 Facilisis, Ave",
+      postalZip: "1844",
+      region: "Poitou-Charentes",
+      country: "United Kingdom",
+      color: "Gray",
+    },
+    ...
+  ];
+
+  const columns: TableColumn[] = [
+    { name: "ID", key: "id", sortable: true, width: 40 },
+    { name: "Name", key: "name", sortable: true, width: 100 },
+    { name: "Phone", key: "phone", sortable: false, width: 100 },
+    { name: "Email", key: "email", sortable: true, width: 180 },
+    { name: "Address", key: "address", sortable: false, width: 150 },
+    { name: "PostalZip", key: "postalZip", sortable: false, width: 80 },
+    { name: "Region", key: "region", sortable: true, width: 80 },
+    { name: "Country", key: "country", sortable: true, width: 80 },
+    { name: "Color", key: "color", sortable: true, width: 60 },
+  ];
+  
+  // use Table component
+  <Table
+    data={users}
+    columns={columns}
+    defaultPageSize={10}
+    fixedLeftColumns={2}
+    fixedRightColumns={1}
+  />
+```
+
+
+## API
+### Table API
+
+| Property                                                                    | Description                                        | Type     | Default |
+| --------------------------------------------------------------------------- | -------------------------------------------------- | -------- | ------- |
+| data                                                                        | Data record array to be displayed                  | object[] | -       |
+| columns Columns of table. You could find more details in `TableColumn API`. | TableColumn[]                                      | -        |
+| defaultPageSize                                                             | Default pagination size. E.g. 10 records per page  | number   | 10      |
+| fixedLeftColumns                                                            | Set the fixed columns start from the first column. | number   | 0       |
+| fixedRightColumns                                                           | Set the fixed columns start from the last column.  | number   | 0       |
+
+### TableColumn API
+
+| Property | Description                                                                              | Type    | Default |
+| -------- | ---------------------------------------------------------------------------------------- | ------- | ------- |
+| key      | Column key                                                                               | string  | -       |
+| name     | Column name                                                                              | string  | -       |
+| sortable | Set it as `true` if you want to make the column sortable.                                | boolean | false   |
+| width    | Set the width for specific column. E.g. Set it as `10`, which means the width is `10px`. | number  | -       |
+
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
