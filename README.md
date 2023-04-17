@@ -3,7 +3,7 @@
 [![Deploy to GH Pages](https://github.com/JohnnyMa/react-table-sample/actions/workflows/main.yml/badge.svg)](https://github.com/JohnnyMa/react-table-sample/actions/workflows/main.yml)
 
 There're limited features in this table component for now. 🌱
-1. Fixed the table header and can specify to sort by the value of a column in positive or reverse order (front-end sorting is enough).
+1. Fixed the table header and can specify to sort by the value of a column in positive or reverse order.
 
 2. Support specifying left n columns or right n columns to be fixed when scrolling horizontally.
 
