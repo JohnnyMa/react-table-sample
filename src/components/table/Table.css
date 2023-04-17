@@ -26,6 +26,7 @@
 .table-item thead th {
   background-color: #f1f1f1;
   border: 1px solid #ddd;
+  border-top: 5px;
   cursor: pointer;
   font-weight: bold;
   text-align: center;
